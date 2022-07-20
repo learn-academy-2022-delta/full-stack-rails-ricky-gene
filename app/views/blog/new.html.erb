@@ -1,0 +1,14 @@
+<h3>Feeling inspired? Add a blog!</h3>
+<%= form_with url: '/blogs/new', local: true do |form| %>
+
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  
+    <br>
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  
+    <br>
+    <%= form.submit 'Add the Blog' %>
+  <% end %>
+  <p> Back to <%= link_to 'Home', blogs_path %></p>
